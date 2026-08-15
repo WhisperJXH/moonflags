@@ -1,10 +1,5 @@
 # Changelog
 
-## 0.1.1 - 2026-08-15
-
-- Clarified ecosystem positioning and project boundaries.
-- Updated local verification commands to use `moon package`.
-
 ## 0.1.0 - 2026-08-15
 
 - Added MoonBit-native feature flag data model.
