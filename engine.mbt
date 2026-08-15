@@ -6,7 +6,11 @@ pub fn Flag::evaluate(self : Flag, ctx : Context) -> Evaluation {
 
 ///|
 /// Evaluate a flag from a flag set.
-pub fn FlagSet::evaluate(self : FlagSet, flag_key : StringView, ctx : Context) -> Evaluation? {
+pub fn FlagSet::evaluate(
+  self : FlagSet,
+  flag_key : StringView,
+  ctx : Context,
+) -> Evaluation? {
   match self.flags.get(flag_key.to_owned()) {
     Some(flag) => Some(evaluate_flag_with_segments(flag, ctx, self.segments))
     None => None
@@ -15,11 +19,14 @@ pub fn FlagSet::evaluate(self : FlagSet, flag_key : StringView, ctx : Context) -
 
 ///|
 /// Evaluate all flags in a set and return results in insertion order.
-pub fn FlagSet::evaluate_all(self : FlagSet, ctx : Context) -> Array[Evaluation] {
+pub fn FlagSet::evaluate_all(
+  self : FlagSet,
+  ctx : Context,
+) -> Array[Evaluation] {
   let results : Array[Evaluation] = []
-  self.flags.each((_key, flag) => results.push(
-    evaluate_flag_with_segments(flag, ctx, self.segments),
-  ))
+  self.flags.each((_key, flag) => {
+    results.push(evaluate_flag_with_segments(flag, ctx, self.segments))
+  })
   results
 }
 
@@ -30,7 +37,11 @@ pub fn rollout_bucket(
   flag_key : StringView,
   user_key : StringView,
 ) -> Int {
-  let text = seed.to_owned() + ":" + flag_key.to_owned() + ":" + user_key.to_owned()
+  let text = seed.to_owned() +
+    ":" +
+    flag_key.to_owned() +
+    ":" +
+    user_key.to_owned()
   let mut hash = 2161
   for unit in text.code_units() {
     hash = (hash * 131 + unit.to_int()) % 10000
@@ -65,10 +76,7 @@ pub fn Rule::matches(
   }
   for segment_key in self.segments {
     match segments.get(segment_key) {
-      Some(segment) =>
-        if !segment.matches(ctx) {
-          return false
-        }
+      Some(segment) => if !segment.matches(ctx) { return false }
       None => return false
     }
   }
@@ -177,18 +185,20 @@ fn evaluate_rollout(
       let bucket = rollout_bucket(rollout.seed, flag_key, user_key)
       match rollout.pick(bucket) {
         Some(variant) => (variant, Some(bucket), [])
-        None => (
-          default_variant,
-          Some(bucket),
-          ["rollout allocations did not cover the computed bucket"],
-        )
+        None =>
+          (
+            default_variant,
+            Some(bucket),
+            ["rollout allocations did not cover the computed bucket"],
+          )
       }
     }
-    None => (
-      default_variant,
-      None,
-      ["rollout requires Context.user_key; default variant was used"],
-    )
+    None =>
+      (
+        default_variant,
+        None,
+        ["rollout requires Context.user_key; default variant was used"],
+      )
   }
 }
 
@@ -220,13 +230,5 @@ fn evaluation(
   bucket~ : Int?,
   warnings~ : Array[String],
 ) -> Evaluation {
-  {
-    flag_key,
-    variant,
-    reason,
-    matched,
-    rule_key,
-    bucket,
-    warnings,
-  }
+  { flag_key, variant, reason, matched, rule_key, bucket, warnings }
 }

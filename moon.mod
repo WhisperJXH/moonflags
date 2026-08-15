@@ -19,7 +19,14 @@ repository = "https://github.com/WhisperJXH/moonflags.git"
 
 license = "Apache-2.0"
 
-keywords = ["feature-flags", "rollout", "targeting", "segments", "validation", "wasm"]
+keywords = [
+  "feature-flags",
+  "rollout",
+  "targeting",
+  "segments",
+  "validation",
+  "wasm",
+]
 
 preferred_target = "wasm"
 

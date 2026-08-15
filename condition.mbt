@@ -66,7 +66,10 @@ pub fn Condition::matches(self : Condition, ctx : Context) -> Bool {
 
 ///|
 /// Evaluate all conditions with AND semantics.
-pub fn all_conditions_match(conditions : ArrayView[Condition], ctx : Context) -> Bool {
+pub fn all_conditions_match(
+  conditions : ArrayView[Condition],
+  ctx : Context,
+) -> Bool {
   for condition in conditions {
     if !condition.matches(ctx) {
       return false
@@ -77,7 +80,10 @@ pub fn all_conditions_match(conditions : ArrayView[Condition], ctx : Context) ->
 
 ///|
 /// Evaluate any condition with OR semantics.
-pub fn any_condition_matches(conditions : ArrayView[Condition], ctx : Context) -> Bool {
+pub fn any_condition_matches(
+  conditions : ArrayView[Condition],
+  ctx : Context,
+) -> Bool {
   for condition in conditions {
     if condition.matches(ctx) {
       return true

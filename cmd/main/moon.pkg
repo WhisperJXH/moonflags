@@ -1,5 +1,5 @@
 import {
-  "WhisperJXH/moonflags" @moonflags,
+  "WhisperJXH/moonflags",
 }
 
 pkgtype(kind: "executable")

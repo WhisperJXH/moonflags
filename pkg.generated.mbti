@@ -1,0 +1,197 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "WhisperJXH/moonflags"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn all_conditions_match(ArrayView[Condition], Context) -> Bool
+
+pub fn any_condition_matches(ArrayView[Condition], Context) -> Bool
+
+pub fn attr_bool(Bool) -> Attribute
+
+pub fn attr_int(Int) -> Attribute
+
+pub fn attr_str(StringView) -> Attribute
+
+pub fn attr_strings(ArrayView[String]) -> Attribute
+
+pub fn bool_eq(StringView, Bool) -> Condition
+
+pub fn contains(StringView, StringView) -> Condition
+
+pub fn contains_any(StringView, ArrayView[String]) -> Condition
+
+pub fn ends_with(StringView, StringView) -> Condition
+
+pub fn exists(StringView) -> Condition
+
+pub fn greater_eq(StringView, Int) -> Condition
+
+pub fn greater_than(StringView, Int) -> Condition
+
+pub fn has_errors(ArrayView[Diagnostic]) -> Bool
+
+pub fn int_eq(StringView, Int) -> Condition
+
+pub fn less_eq(StringView, Int) -> Condition
+
+pub fn less_than(StringView, Int) -> Condition
+
+pub fn missing(StringView) -> Condition
+
+pub fn rollout_bucket(StringView, StringView, StringView) -> Int
+
+pub fn starts_with(StringView, StringView) -> Condition
+
+pub fn str_eq(StringView, StringView) -> Condition
+
+pub fn str_not_eq(StringView, StringView) -> Condition
+
+pub fn str_one_of(StringView, ArrayView[String]) -> Condition
+
+pub fn validate_flag(Flag) -> Array[Diagnostic]
+
+pub fn validate_set(FlagSet) -> Array[Diagnostic]
+
+// Errors
+
+// Types and methods
+pub(all) enum Attribute {
+  Str(String)
+  Int(Int)
+  Bool(Bool)
+  Strings(Array[String])
+} derive(Eq, @debug.Debug)
+
+pub struct Condition {
+  attr : String
+  matcher : Matcher
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Condition::Condition(StringView, Matcher) -> Self
+pub fn Condition::explain(Self, Context) -> String
+pub fn Condition::matches(Self, Context) -> Bool
+
+pub struct Context {
+  user_key : String?
+  attributes : Map[String, Attribute]
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Context::Context(user_key? : StringView, attributes? : Map[String, Attribute]) -> Self
+pub fn Context::contains(Self, StringView) -> Bool
+pub fn Context::get(Self, StringView) -> Attribute?
+pub fn Context::with_bool(Self, StringView, Bool) -> Self
+pub fn Context::with_int(Self, StringView, Int) -> Self
+pub fn Context::with_str(Self, StringView, StringView) -> Self
+pub fn Context::with_strings(Self, StringView, ArrayView[String]) -> Self
+
+pub struct Diagnostic {
+  severity : Severity
+  path : String
+  message : String
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Diagnostic::Diagnostic(Severity, StringView, StringView) -> Self
+pub fn Diagnostic::error(StringView, StringView) -> Self
+pub fn Diagnostic::warning(StringView, StringView) -> Self
+
+pub struct Evaluation {
+  flag_key : String
+  variant : String
+  reason : String
+  matched : Bool
+  rule_key : String?
+  bucket : Int?
+  warnings : Array[String]
+} derive(Eq, @debug.Debug)
+
+pub struct Flag {
+  key : String
+  enabled : Bool
+  variants : Array[String]
+  default_variant : String
+  off_variant : String
+  rules : Array[Rule]
+  fallthrough_variant : String?
+  fallthrough_rollout : Rollout?
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Flag::Flag(StringView, ArrayView[String], StringView, enabled? : Bool, off_variant? : StringView, rules? : ArrayView[Rule], fallthrough_variant? : StringView, fallthrough_rollout? : Rollout) -> Self
+pub fn Flag::evaluate(Self, Context) -> Evaluation
+
+pub struct FlagSet {
+  flags : Map[String, Flag]
+  segments : Map[String, Segment]
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn FlagSet::FlagSet(flags? : ArrayView[Flag], segments? : ArrayView[Segment]) -> Self
+pub fn FlagSet::evaluate(Self, StringView, Context) -> Evaluation?
+pub fn FlagSet::evaluate_all(Self, Context) -> Array[Evaluation]
+pub fn FlagSet::with_flag(Self, Flag) -> Self
+pub fn FlagSet::with_segment(Self, Segment) -> Self
+
+pub(all) enum Matcher {
+  Exists
+  Missing
+  Is(Attribute)
+  IsNot(Attribute)
+  OneOf(Array[Attribute])
+  Contains(String)
+  ContainsAny(Array[String])
+  StartsWith(String)
+  EndsWith(String)
+  GreaterThan(Int)
+  GreaterEq(Int)
+  LessThan(Int)
+  LessEq(Int)
+} derive(Eq, @debug.Debug)
+
+pub struct Rollout {
+  seed : String
+  allocations : Array[WeightedVariant]
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Rollout::Rollout(ArrayView[WeightedVariant], seed? : StringView) -> Self
+pub fn Rollout::pick(Self, Int) -> String?
+
+pub struct Rule {
+  key : String
+  conditions : Array[Condition]
+  segments : Array[String]
+  variant : String?
+  rollout : Rollout?
+  reason : String
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Rule::Rule(StringView, conditions? : ArrayView[Condition], segments? : ArrayView[String], variant? : StringView, rollout? : Rollout, reason? : StringView) -> Self
+pub fn Rule::matches(Self, Context, Map[String, Segment]) -> Bool
+
+pub struct Segment {
+  key : String
+  include_users : Array[String]
+  exclude_users : Array[String]
+  conditions : Array[Condition]
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn Segment::Segment(StringView, include_users? : ArrayView[String], exclude_users? : ArrayView[String], conditions? : ArrayView[Condition]) -> Self
+pub fn Segment::matches(Self, Context) -> Bool
+
+pub(all) enum Severity {
+  Error
+  Warning
+} derive(Eq, @debug.Debug)
+
+pub struct WeightedVariant {
+  variant : String
+  weight : Int
+} derive(Eq, @debug.Debug)
+#alias(new, deprecated)
+pub fn WeightedVariant::WeightedVariant(StringView, Int) -> Self
+
+// Type aliases
+
+// Traits
+

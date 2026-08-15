@@ -24,12 +24,16 @@ test "rollout bucket stays inside expected range" {
 
 ///|
 test "segment conditions require all predicates" {
-  let segment = Segment(
-    "paid-cn",
-    conditions=[str_eq("country", "CN"), bool_eq("paid", true)],
-  )
-  let pass = Context(user_key="p").with_str("country", "CN").with_bool("paid", true)
-  let fail = Context(user_key="f").with_str("country", "CN").with_bool("paid", false)
+  let segment = Segment("paid-cn", conditions=[
+    str_eq("country", "CN"),
+    bool_eq("paid", true),
+  ])
+  let pass = Context(user_key="p")
+    .with_str("country", "CN")
+    .with_bool("paid", true)
+  let fail = Context(user_key="f")
+    .with_str("country", "CN")
+    .with_bool("paid", false)
   inspect(segment.matches(pass), content="true")
   inspect(segment.matches(fail), content="false")
 }

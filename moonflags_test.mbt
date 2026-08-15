@@ -59,12 +59,22 @@ test "segment include and exclude lists affect rules" {
     exclude_users=["blocked"],
     conditions=[@moonflags.str_eq("team", "platform")],
   )
-  let rule = @moonflags.Rule("internal-rule", segments=["internal"], variant="on")
+  let rule = @moonflags.Rule(
+    "internal-rule",
+    segments=["internal"],
+    variant="on",
+  )
   let flag = @moonflags.Flag("console", ["off", "on"], "off", rules=[rule])
   let set = @moonflags.FlagSet(flags=[flag], segments=[segment])
   let included = set.evaluate("console", @moonflags.Context(user_key="alice"))
-  let blocked = set.evaluate("console", @moonflags.Context(user_key="blocked").with_str("team", "platform"))
-  let by_attr = set.evaluate("console", @moonflags.Context(user_key="carol").with_str("team", "platform"))
+  let blocked = set.evaluate(
+    "console",
+    @moonflags.Context(user_key="blocked").with_str("team", "platform"),
+  )
+  let by_attr = set.evaluate(
+    "console",
+    @moonflags.Context(user_key="carol").with_str("team", "platform"),
+  )
   debug_inspect(included.map(result => result.variant), content="Some(\"on\")")
   debug_inspect(blocked.map(result => result.variant), content="Some(\"off\")")
   debug_inspect(by_attr.map(result => result.variant), content="Some(\"on\")")
@@ -72,10 +82,13 @@ test "segment include and exclude lists affect rules" {
 
 ///|
 test "rollout bucket is deterministic for a user" {
-  let rollout = @moonflags.Rollout([
-    @moonflags.WeightedVariant("control", 5000),
-    @moonflags.WeightedVariant("beta", 5000),
-  ], seed="checkout-v1")
+  let rollout = @moonflags.Rollout(
+    [
+      @moonflags.WeightedVariant("control", 5000),
+      @moonflags.WeightedVariant("beta", 5000),
+    ],
+    seed="checkout-v1",
+  )
   let flag = @moonflags.Flag(
     "checkout",
     ["control", "beta"],
@@ -92,10 +105,16 @@ test "rollout bucket is deterministic for a user" {
 
 ///|
 test "rollout without user key returns default and warning" {
-  let rollout = @moonflags.Rollout([
-    @moonflags.WeightedVariant("on", 10000),
-  ], seed="needs-user")
-  let flag = @moonflags.Flag("gate", ["off", "on"], "off", fallthrough_rollout=rollout)
+  let rollout = @moonflags.Rollout(
+    [@moonflags.WeightedVariant("on", 10000)],
+    seed="needs-user",
+  )
+  let flag = @moonflags.Flag(
+    "gate",
+    ["off", "on"],
+    "off",
+    fallthrough_rollout=rollout,
+  )
   let result = flag.evaluate(@moonflags.Context())
   inspect(result.variant, content="off")
   inspect(result.bucket is None, content="true")
@@ -121,7 +140,12 @@ test "validation reports invalid variants and unknown segment" {
 
 ///|
 test "evaluate_all returns one result per flag" {
-  let first = @moonflags.Flag("one", ["off", "on"], "off", fallthrough_variant="on")
+  let first = @moonflags.Flag(
+    "one",
+    ["off", "on"],
+    "off",
+    fallthrough_variant="on",
+  )
   let second = @moonflags.Flag("two", ["a", "b"], "a", fallthrough_variant="b")
   let set = @moonflags.FlagSet(flags=[first, second])
   let results = set.evaluate_all(@moonflags.Context(user_key="u"))

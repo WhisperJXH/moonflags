@@ -1,8 +1,12 @@
+///|
 fn main {
-  let rollout = @moonflags.Rollout([
-    @moonflags.WeightedVariant("control", 6000),
-    @moonflags.WeightedVariant("beta", 4000),
-  ], seed="checkout-v1")
+  let rollout = @moonflags.Rollout(
+    [
+      @moonflags.WeightedVariant("control", 6000),
+      @moonflags.WeightedVariant("beta", 4000),
+    ],
+    seed="checkout-v1",
+  )
   let paid_rule = @moonflags.Rule(
     "paid-cn-users",
     conditions=[
@@ -31,6 +35,7 @@ fn main {
   println("diagnostics: " + @moonflags.validate_flag(flag).length().to_string())
 }
 
+///|
 fn show_bucket(bucket : Int?) -> String {
   match bucket {
     Some(value) => value.to_string()

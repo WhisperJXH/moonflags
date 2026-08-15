@@ -17,7 +17,10 @@ pub fn Diagnostic::error(path : StringView, message : StringView) -> Diagnostic 
 
 ///|
 /// Build a warning diagnostic.
-pub fn Diagnostic::warning(path : StringView, message : StringView) -> Diagnostic {
+pub fn Diagnostic::warning(
+  path : StringView,
+  message : StringView,
+) -> Diagnostic {
   Diagnostic(Warning, path, message)
 }
 
@@ -60,7 +63,9 @@ fn validate_flag_shape(flag : Flag, diagnostics : Array[Diagnostic]) -> Unit {
     diagnostics.push(Diagnostic::error("flags", "flag key must not be empty"))
   }
   if flag.variants.is_empty() {
-    diagnostics.push(Diagnostic::error(path, "flag must define at least one variant"))
+    diagnostics.push(
+      Diagnostic::error(path, "flag must define at least one variant"),
+    )
   }
   push_duplicate_warnings(path + ".variants", flag.variants, diagnostics)
   if !flag.variants.contains(flag.default_variant) {
@@ -92,7 +97,13 @@ fn validate_flag_shape(flag : Flag, diagnostics : Array[Diagnostic]) -> Unit {
     None => ()
   }
   match flag.fallthrough_rollout {
-    Some(rollout) => validate_rollout(path + ".fallthrough_rollout", rollout, flag, diagnostics)
+    Some(rollout) =>
+      validate_rollout(
+        path + ".fallthrough_rollout",
+        rollout,
+        flag,
+        diagnostics,
+      )
     None => ()
   }
 }
@@ -116,37 +127,50 @@ fn validate_rules(
     }
     if rule.conditions.is_empty() && rule.segments.is_empty() {
       diagnostics.push(
-        Diagnostic::warning(path, "rule has no conditions or segments and will match every context"),
+        Diagnostic::warning(
+          path, "rule has no conditions or segments and will match every context",
+        ),
       )
     }
     match rule.variant {
       Some(variant) =>
         if !flag.variants.contains(variant) {
           diagnostics.push(
-            Diagnostic::error(path + ".variant", "rule variant must be listed in flag variants"),
+            Diagnostic::error(
+              path + ".variant",
+              "rule variant must be listed in flag variants",
+            ),
           )
         }
       None => ()
     }
     match rule.rollout {
-      Some(rollout) => validate_rollout(path + ".rollout", rollout, flag, diagnostics)
+      Some(rollout) =>
+        validate_rollout(path + ".rollout", rollout, flag, diagnostics)
       None =>
         if rule.variant is None {
           diagnostics.push(
-            Diagnostic::warning(path, "rule has neither variant nor rollout and will use default"),
+            Diagnostic::warning(
+              path, "rule has neither variant nor rollout and will use default",
+            ),
           )
         }
     }
     if rule.variant is Some(_) && rule.rollout is Some(_) {
       diagnostics.push(
-        Diagnostic::warning(path, "rule defines both variant and rollout; rollout takes precedence"),
+        Diagnostic::warning(
+          path, "rule defines both variant and rollout; rollout takes precedence",
+        ),
       )
     }
     if check_segments {
       for segment_key in rule.segments {
         if !segments.contains(segment_key) {
           diagnostics.push(
-            Diagnostic::error(path + ".segments", "unknown segment: " + segment_key),
+            Diagnostic::error(
+              path + ".segments",
+              "unknown segment: " + segment_key,
+            ),
           )
         }
       }
@@ -169,28 +193,37 @@ fn validate_rollout(
   for i, allocation in rollout.allocations {
     let item_path = path + ".allocations[" + i.to_string() + "]"
     if allocation.variant.is_empty() {
-      diagnostics.push(Diagnostic::error(item_path, "allocation variant must not be empty"))
+      diagnostics.push(
+        Diagnostic::error(item_path, "allocation variant must not be empty"),
+      )
     }
     if !flag.variants.contains(allocation.variant) {
       diagnostics.push(
-        Diagnostic::error(item_path, "allocation variant must be listed in flag variants"),
+        Diagnostic::error(
+          item_path, "allocation variant must be listed in flag variants",
+        ),
       )
     }
     if allocation.weight < 0 {
-      diagnostics.push(Diagnostic::error(item_path, "allocation weight must be >= 0"))
+      diagnostics.push(
+        Diagnostic::error(item_path, "allocation weight must be >= 0"),
+      )
     }
     if allocation.weight > 10000 {
-      diagnostics.push(Diagnostic::error(item_path, "allocation weight must be <= 10000"))
+      diagnostics.push(
+        Diagnostic::error(item_path, "allocation weight must be <= 10000"),
+      )
     }
     total = total + allocation.weight
   }
   if total > 10000 {
-    diagnostics.push(Diagnostic::error(path, "rollout total weight must be <= 10000"))
+    diagnostics.push(
+      Diagnostic::error(path, "rollout total weight must be <= 10000"),
+    )
   } else if total < 10000 {
     diagnostics.push(
       Diagnostic::warning(
-        path,
-        "rollout total weight is below 10000; uncovered buckets use default variant",
+        path, "rollout total weight is below 10000; uncovered buckets use default variant",
       ),
     )
   }
@@ -200,25 +233,37 @@ fn validate_rollout(
 fn validate_segment(segment : Segment, diagnostics : Array[Diagnostic]) -> Unit {
   let path = "segments." + segment.key
   if segment.key.is_empty() {
-    diagnostics.push(Diagnostic::error("segments", "segment key must not be empty"))
+    diagnostics.push(
+      Diagnostic::error("segments", "segment key must not be empty"),
+    )
   }
   if segment.include_users.is_empty() && segment.conditions.is_empty() {
     diagnostics.push(
       Diagnostic::warning(
-        path,
-        "segment has no include users or conditions and only matches contexts explicitly excluded from nothing",
+        path, "segment has no include users or conditions and only matches contexts explicitly excluded from nothing",
       ),
     )
   }
   for user in segment.include_users {
     if segment.exclude_users.contains(user) {
       diagnostics.push(
-        Diagnostic::error(path, "user " + user + " appears in both include and exclude lists"),
+        Diagnostic::error(
+          path,
+          "user " + user + " appears in both include and exclude lists",
+        ),
       )
     }
   }
-  push_duplicate_warnings(path + ".include_users", segment.include_users, diagnostics)
-  push_duplicate_warnings(path + ".exclude_users", segment.exclude_users, diagnostics)
+  push_duplicate_warnings(
+    path + ".include_users",
+    segment.include_users,
+    diagnostics,
+  )
+  push_duplicate_warnings(
+    path + ".exclude_users",
+    segment.exclude_users,
+    diagnostics,
+  )
 }
 
 ///|

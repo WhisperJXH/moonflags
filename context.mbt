@@ -5,10 +5,7 @@ pub fn Context::Context(
   user_key? : StringView,
   attributes? : Map[String, Attribute] = Map([]),
 ) -> Context {
-  {
-    user_key: user_key.map(v => v.to_owned()),
-    attributes,
-  }
+  { user_key: user_key.map(v => v.to_owned()), attributes }
 }
 
 ///|
@@ -24,7 +21,11 @@ pub fn Context::with_str(
 
 ///|
 /// Attach an integer attribute and return the same context for chaining.
-pub fn Context::with_int(self : Context, key : StringView, value : Int) -> Context {
+pub fn Context::with_int(
+  self : Context,
+  key : StringView,
+  value : Int,
+) -> Context {
   self.attributes[key.to_owned()] = Int(value)
   self
 }
