@@ -57,7 +57,7 @@ moon check
 moon build
 moon test
 moon run cmd/main
-moon publish --dry-run
+moon package
 ```
 
 ## 核心功能

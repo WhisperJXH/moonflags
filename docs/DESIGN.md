@@ -6,7 +6,7 @@ MoonFlags 的目标是在 MoonBit 生态中提供一个可复用、可测试、�
 
 ## 生态去重
 
-选题前通过 mooncakes.io 模块清单检索了 `feature`、`flag`、`toggle`、`rollout`、`targeting`、`segment`、`experiment` 等关键词，未发现与 MoonFlags 功能高度重合的已发布包。项目定位为功能开关与灰度分流规则引擎，区别于已有的配置解析、HTTP 头解析、cron、robots、HAR、license audit 等工具包。
+通过 mooncakes.io 模块清单检索 `feature`、`flag`、`toggle`、`rollout`、`targeting`、`segment`、`experiment` 等关键词后，确认 MoonBit 生态中已经存在同方向的功能开关与灰度发布项目。MoonFlags 因此将边界收窄为一个小型、纯 API 驱动的本地规则模型：强调 segment 复用、确定性分桶、可解释评估结果和配置诊断，不内置远程控制面、持久化同步或 JSON/YAML 配置加载层。这个定位使它更适合作为 MoonBit / WebAssembly 应用中的轻量嵌入式判定核心，或者作为更高层配置系统的规则评估与校验组件。
 
 ## 模块结构
 
