@@ -1,5 +1,5 @@
-// import {
-//   "WhisperJXH/moonflags" @lib,
-// }
+import {
+  "WhisperJXH/moonflags" @moonflags,
+}
 
 pkgtype(kind: "executable")

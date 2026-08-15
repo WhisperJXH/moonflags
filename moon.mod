@@ -13,14 +13,14 @@ name = "WhisperJXH/moonflags"
 
 version = "0.1.0"
 
-readme = "README.mbt.md"
+readme = "README.md"
 
-repository = ""
+repository = "https://github.com/WhisperJXH/moonflags.git"
 
 license = "Apache-2.0"
 
-keywords = []
+keywords = ["feature-flags", "rollout", "targeting", "segments", "validation", "wasm"]
 
 preferred_target = "wasm"
 
-description = ""
+description = "MoonBit-native feature flag, segment targeting, rollout and validation toolkit"
