@@ -22,7 +22,7 @@ MoonFlags 是一个 MoonBit 原生的功能开关、用户分群、灰度分流�
 
 MoonFlags 的边界是小型、纯 API 驱动的本地规则模型，重点放在 segment 复用、确定性分桶、可解释评估结果和配置诊断。项目不内置远程控制面、持久化同步或 JSON/YAML 配置加载层，便于作为更高层配置系统的嵌入式规则评估与校验组件。
 
-## 拟实现的核心功能
+## 已完成的核心功能
 
 - `Context` 属性模型：支持字符串、整数、布尔值和字符串列表。
 - `Condition` 规则匹配：支持存在、缺失、等值、不等、集合命中、字符串包含、前后缀和整数比较。
@@ -33,9 +33,11 @@ MoonFlags 的边界是小型、纯 API 驱动的本地规则模型，重点放�
 - `preset_catalog_*` 场景预设：提供 175 个常见业务 feature flag 模板，覆盖多国家、多套餐、多角色、多年龄门槛和不同比例 rollout，可用于项目初始化、示例演示和批量回归测试。
 - 提供 README、可运行示例、测试、CI、开源许可证和 Mooncakes 发布配置。
 
-## 项目现有基础与本次计划
+## 完成情况与验收证据
 
-当前仓库已建立标准 MoonBit 包结构，完成核心数据模型、条件匹配、稳定分流、FlagSet 评估、配置校验、黑盒/白盒测试、可运行示例和 GitHub Actions CI。本次新增 `preset_catalog_*` 强类型场景预设目录，把常见业务开关配置沉淀为可编译、可测试、可校验的 MoonBit API 模板，既可作为接入样例，也可作为规则引擎的批量回归用例。后续计划根据 MoonBit 生态使用反馈扩展 JSON 配置加载、规则导出和更细粒度诊断。
+当前仓库已经完成标准 MoonBit 包结构、核心数据模型、条件匹配、稳定分流、FlagSet 评估、配置校验、黑盒/白盒测试、可运行示例、GitHub Actions CI、版本标签和 Mooncakes 发布。`preset_catalog_*` 强类型场景预设目录已经把常见业务开关配置沉淀为可编译、可测试、可校验的 MoonBit API 模板，既可作为接入样例，也可作为规则引擎的批量回归用例。
+
+项目已通过 `moon check`、`moon build`、`moon test`、`moon run cmd/main`、`moon package`、`moon check --deny-warn`、`moon test --deny-warn` 和 `moon fmt --check`。当前测试结果为 13 项全部通过，有效 MoonBit 源码 7223 行，Mooncakes 最新发布版本构建状态为 success。
 
 ## 原创或参考说明
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2026-08-17
+
+- Finalized project proposal wording for completed acceptance materials.
+- Clarified final verification evidence and package publication status.
+
 ## 0.2.0 - 2026-08-17
 
 - Added a reusable preset catalog with 175 typed Rule / Flag / Context recipes.
