@@ -240,7 +240,7 @@ fn validate_segment(segment : Segment, diagnostics : Array[Diagnostic]) -> Unit 
   if segment.include_users.is_empty() && segment.conditions.is_empty() {
     diagnostics.push(
       Diagnostic::warning(
-        path, "segment has no include users or conditions and only matches contexts explicitly excluded from nothing",
+        path, "segment has no include users or conditions and will match every context except excluded users",
       ),
     )
   }

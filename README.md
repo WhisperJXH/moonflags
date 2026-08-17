@@ -50,6 +50,16 @@ let ctx = @moonflags.Context(user_key="user-42")
 let result = flag.evaluate(ctx)
 ```
 
+## 预设目录示例
+
+`preset_catalog_*` 提供一组可直接运行和校验的场景模板。使用者可以从目录中挑选接近业务场景的 `Flag`，再按自己的属性名、变体和分流比例改造成正式配置。
+
+```moonbit
+let set = @moonflags.preset_catalog_set()
+let ctx = @moonflags.preset_checkout_cn_free_viewer_context("user-42")
+let result = set.evaluate("checkout_cn_free_viewer", ctx)
+```
+
 ## 本地运行
 
 ```bash
@@ -69,6 +79,7 @@ moon package
 - `Rollout`：使用稳定哈希桶进行 0 到 10000 基点分流。
 - `Flag` / `FlagSet`：评估单个开关或一组开关。
 - `validate_flag` / `validate_set`：检查无效变体、重复值、未知 segment 和 rollout 权重错误。
+- `preset_catalog_*`：提供 175 个常见业务场景的可复用 Rule / Flag / Context 预设，覆盖结账、导航、搜索、计费、通知、权限、报表、导入导出等场景，可作为项目接入时的强类型模板。
 
 ## 支持范围
 
@@ -77,6 +88,7 @@ moon package
 - 支持命名 segment、用户 include/exclude 名单和属性条件。
 - 支持 0 到 10000 基点的稳定百分比分流。
 - 支持可解释的评估结果：返回命中规则、原因、桶号和警告。
+- 支持通过预设目录快速生成本地 feature flag 配置样例，便于测试、演示和项目初始化。
 
 ## 暂不支持范围
 

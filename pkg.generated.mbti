@@ -42,6 +42,1062 @@ pub fn less_than(StringView, Int) -> Condition
 
 pub fn missing(StringView) -> Condition
 
+pub fn preset_analytics_br_free_viewer_context(StringView) -> Context
+
+pub fn preset_analytics_br_free_viewer_flag() -> Flag
+
+pub fn preset_analytics_br_free_viewer_rule() -> Rule
+
+pub fn preset_analytics_cn_trial_owner_context(StringView) -> Context
+
+pub fn preset_analytics_cn_trial_owner_flag() -> Flag
+
+pub fn preset_analytics_cn_trial_owner_rule() -> Rule
+
+pub fn preset_analytics_de_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_analytics_de_enterprise_operator_flag() -> Flag
+
+pub fn preset_analytics_de_enterprise_operator_rule() -> Rule
+
+pub fn preset_analytics_fr_trial_owner_context(StringView) -> Context
+
+pub fn preset_analytics_fr_trial_owner_flag() -> Flag
+
+pub fn preset_analytics_fr_trial_owner_rule() -> Rule
+
+pub fn preset_analytics_jp_pro_editor_context(StringView) -> Context
+
+pub fn preset_analytics_jp_pro_editor_flag() -> Flag
+
+pub fn preset_analytics_jp_pro_editor_rule() -> Rule
+
+pub fn preset_analytics_sg_team_admin_context(StringView) -> Context
+
+pub fn preset_analytics_sg_team_admin_flag() -> Flag
+
+pub fn preset_analytics_sg_team_admin_rule() -> Rule
+
+pub fn preset_analytics_us_free_viewer_context(StringView) -> Context
+
+pub fn preset_analytics_us_free_viewer_flag() -> Flag
+
+pub fn preset_analytics_us_free_viewer_rule() -> Rule
+
+pub fn preset_billing_br_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_billing_br_enterprise_operator_flag() -> Flag
+
+pub fn preset_billing_br_enterprise_operator_rule() -> Rule
+
+pub fn preset_billing_cn_team_admin_context(StringView) -> Context
+
+pub fn preset_billing_cn_team_admin_flag() -> Flag
+
+pub fn preset_billing_cn_team_admin_rule() -> Rule
+
+pub fn preset_billing_de_pro_editor_context(StringView) -> Context
+
+pub fn preset_billing_de_pro_editor_flag() -> Flag
+
+pub fn preset_billing_de_pro_editor_rule() -> Rule
+
+pub fn preset_billing_fr_team_admin_context(StringView) -> Context
+
+pub fn preset_billing_fr_team_admin_flag() -> Flag
+
+pub fn preset_billing_fr_team_admin_rule() -> Rule
+
+pub fn preset_billing_jp_trial_owner_context(StringView) -> Context
+
+pub fn preset_billing_jp_trial_owner_flag() -> Flag
+
+pub fn preset_billing_jp_trial_owner_rule() -> Rule
+
+pub fn preset_billing_sg_free_viewer_context(StringView) -> Context
+
+pub fn preset_billing_sg_free_viewer_flag() -> Flag
+
+pub fn preset_billing_sg_free_viewer_rule() -> Rule
+
+pub fn preset_billing_us_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_billing_us_enterprise_operator_flag() -> Flag
+
+pub fn preset_billing_us_enterprise_operator_rule() -> Rule
+
+pub fn preset_campaign_br_pro_editor_context(StringView) -> Context
+
+pub fn preset_campaign_br_pro_editor_flag() -> Flag
+
+pub fn preset_campaign_br_pro_editor_rule() -> Rule
+
+pub fn preset_campaign_cn_free_viewer_context(StringView) -> Context
+
+pub fn preset_campaign_cn_free_viewer_flag() -> Flag
+
+pub fn preset_campaign_cn_free_viewer_rule() -> Rule
+
+pub fn preset_campaign_de_trial_owner_context(StringView) -> Context
+
+pub fn preset_campaign_de_trial_owner_flag() -> Flag
+
+pub fn preset_campaign_de_trial_owner_rule() -> Rule
+
+pub fn preset_campaign_fr_free_viewer_context(StringView) -> Context
+
+pub fn preset_campaign_fr_free_viewer_flag() -> Flag
+
+pub fn preset_campaign_fr_free_viewer_rule() -> Rule
+
+pub fn preset_campaign_jp_team_admin_context(StringView) -> Context
+
+pub fn preset_campaign_jp_team_admin_flag() -> Flag
+
+pub fn preset_campaign_jp_team_admin_rule() -> Rule
+
+pub fn preset_campaign_sg_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_campaign_sg_enterprise_operator_flag() -> Flag
+
+pub fn preset_campaign_sg_enterprise_operator_rule() -> Rule
+
+pub fn preset_campaign_us_pro_editor_context(StringView) -> Context
+
+pub fn preset_campaign_us_pro_editor_flag() -> Flag
+
+pub fn preset_campaign_us_pro_editor_rule() -> Rule
+
+pub fn preset_catalog_br_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_catalog_br_enterprise_operator_flag() -> Flag
+
+pub fn preset_catalog_br_enterprise_operator_rule() -> Rule
+
+pub fn preset_catalog_cn_team_admin_context(StringView) -> Context
+
+pub fn preset_catalog_cn_team_admin_flag() -> Flag
+
+pub fn preset_catalog_cn_team_admin_rule() -> Rule
+
+pub fn preset_catalog_de_pro_editor_context(StringView) -> Context
+
+pub fn preset_catalog_de_pro_editor_flag() -> Flag
+
+pub fn preset_catalog_de_pro_editor_rule() -> Rule
+
+pub fn preset_catalog_flags() -> Array[Flag]
+
+pub fn preset_catalog_fr_team_admin_context(StringView) -> Context
+
+pub fn preset_catalog_fr_team_admin_flag() -> Flag
+
+pub fn preset_catalog_fr_team_admin_rule() -> Rule
+
+pub fn preset_catalog_jp_trial_owner_context(StringView) -> Context
+
+pub fn preset_catalog_jp_trial_owner_flag() -> Flag
+
+pub fn preset_catalog_jp_trial_owner_rule() -> Rule
+
+pub fn preset_catalog_set() -> FlagSet
+
+pub fn preset_catalog_sg_free_viewer_context(StringView) -> Context
+
+pub fn preset_catalog_sg_free_viewer_flag() -> Flag
+
+pub fn preset_catalog_sg_free_viewer_rule() -> Rule
+
+pub fn preset_catalog_size() -> Int
+
+pub fn preset_catalog_us_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_catalog_us_enterprise_operator_flag() -> Flag
+
+pub fn preset_catalog_us_enterprise_operator_rule() -> Rule
+
+pub fn preset_checkout_br_pro_editor_context(StringView) -> Context
+
+pub fn preset_checkout_br_pro_editor_flag() -> Flag
+
+pub fn preset_checkout_br_pro_editor_rule() -> Rule
+
+pub fn preset_checkout_cn_free_viewer_context(StringView) -> Context
+
+pub fn preset_checkout_cn_free_viewer_flag() -> Flag
+
+pub fn preset_checkout_cn_free_viewer_rule() -> Rule
+
+pub fn preset_checkout_de_trial_owner_context(StringView) -> Context
+
+pub fn preset_checkout_de_trial_owner_flag() -> Flag
+
+pub fn preset_checkout_de_trial_owner_rule() -> Rule
+
+pub fn preset_checkout_fr_free_viewer_context(StringView) -> Context
+
+pub fn preset_checkout_fr_free_viewer_flag() -> Flag
+
+pub fn preset_checkout_fr_free_viewer_rule() -> Rule
+
+pub fn preset_checkout_jp_team_admin_context(StringView) -> Context
+
+pub fn preset_checkout_jp_team_admin_flag() -> Flag
+
+pub fn preset_checkout_jp_team_admin_rule() -> Rule
+
+pub fn preset_checkout_sg_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_checkout_sg_enterprise_operator_flag() -> Flag
+
+pub fn preset_checkout_sg_enterprise_operator_rule() -> Rule
+
+pub fn preset_checkout_us_pro_editor_context(StringView) -> Context
+
+pub fn preset_checkout_us_pro_editor_flag() -> Flag
+
+pub fn preset_checkout_us_pro_editor_rule() -> Rule
+
+pub fn preset_dashboard_br_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_dashboard_br_enterprise_operator_flag() -> Flag
+
+pub fn preset_dashboard_br_enterprise_operator_rule() -> Rule
+
+pub fn preset_dashboard_cn_team_admin_context(StringView) -> Context
+
+pub fn preset_dashboard_cn_team_admin_flag() -> Flag
+
+pub fn preset_dashboard_cn_team_admin_rule() -> Rule
+
+pub fn preset_dashboard_de_pro_editor_context(StringView) -> Context
+
+pub fn preset_dashboard_de_pro_editor_flag() -> Flag
+
+pub fn preset_dashboard_de_pro_editor_rule() -> Rule
+
+pub fn preset_dashboard_fr_team_admin_context(StringView) -> Context
+
+pub fn preset_dashboard_fr_team_admin_flag() -> Flag
+
+pub fn preset_dashboard_fr_team_admin_rule() -> Rule
+
+pub fn preset_dashboard_jp_trial_owner_context(StringView) -> Context
+
+pub fn preset_dashboard_jp_trial_owner_flag() -> Flag
+
+pub fn preset_dashboard_jp_trial_owner_rule() -> Rule
+
+pub fn preset_dashboard_sg_free_viewer_context(StringView) -> Context
+
+pub fn preset_dashboard_sg_free_viewer_flag() -> Flag
+
+pub fn preset_dashboard_sg_free_viewer_rule() -> Rule
+
+pub fn preset_dashboard_us_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_dashboard_us_enterprise_operator_flag() -> Flag
+
+pub fn preset_dashboard_us_enterprise_operator_rule() -> Rule
+
+pub fn preset_editor_br_pro_editor_context(StringView) -> Context
+
+pub fn preset_editor_br_pro_editor_flag() -> Flag
+
+pub fn preset_editor_br_pro_editor_rule() -> Rule
+
+pub fn preset_editor_cn_free_viewer_context(StringView) -> Context
+
+pub fn preset_editor_cn_free_viewer_flag() -> Flag
+
+pub fn preset_editor_cn_free_viewer_rule() -> Rule
+
+pub fn preset_editor_de_trial_owner_context(StringView) -> Context
+
+pub fn preset_editor_de_trial_owner_flag() -> Flag
+
+pub fn preset_editor_de_trial_owner_rule() -> Rule
+
+pub fn preset_editor_fr_free_viewer_context(StringView) -> Context
+
+pub fn preset_editor_fr_free_viewer_flag() -> Flag
+
+pub fn preset_editor_fr_free_viewer_rule() -> Rule
+
+pub fn preset_editor_jp_team_admin_context(StringView) -> Context
+
+pub fn preset_editor_jp_team_admin_flag() -> Flag
+
+pub fn preset_editor_jp_team_admin_rule() -> Rule
+
+pub fn preset_editor_sg_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_editor_sg_enterprise_operator_flag() -> Flag
+
+pub fn preset_editor_sg_enterprise_operator_rule() -> Rule
+
+pub fn preset_editor_us_pro_editor_context(StringView) -> Context
+
+pub fn preset_editor_us_pro_editor_flag() -> Flag
+
+pub fn preset_editor_us_pro_editor_rule() -> Rule
+
+pub fn preset_export_br_trial_owner_context(StringView) -> Context
+
+pub fn preset_export_br_trial_owner_flag() -> Flag
+
+pub fn preset_export_br_trial_owner_rule() -> Rule
+
+pub fn preset_export_cn_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_export_cn_enterprise_operator_flag() -> Flag
+
+pub fn preset_export_cn_enterprise_operator_rule() -> Rule
+
+pub fn preset_export_de_team_admin_context(StringView) -> Context
+
+pub fn preset_export_de_team_admin_flag() -> Flag
+
+pub fn preset_export_de_team_admin_rule() -> Rule
+
+pub fn preset_export_fr_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_export_fr_enterprise_operator_flag() -> Flag
+
+pub fn preset_export_fr_enterprise_operator_rule() -> Rule
+
+pub fn preset_export_jp_free_viewer_context(StringView) -> Context
+
+pub fn preset_export_jp_free_viewer_flag() -> Flag
+
+pub fn preset_export_jp_free_viewer_rule() -> Rule
+
+pub fn preset_export_sg_pro_editor_context(StringView) -> Context
+
+pub fn preset_export_sg_pro_editor_flag() -> Flag
+
+pub fn preset_export_sg_pro_editor_rule() -> Rule
+
+pub fn preset_export_us_trial_owner_context(StringView) -> Context
+
+pub fn preset_export_us_trial_owner_flag() -> Flag
+
+pub fn preset_export_us_trial_owner_rule() -> Rule
+
+pub fn preset_import_br_pro_editor_context(StringView) -> Context
+
+pub fn preset_import_br_pro_editor_flag() -> Flag
+
+pub fn preset_import_br_pro_editor_rule() -> Rule
+
+pub fn preset_import_cn_free_viewer_context(StringView) -> Context
+
+pub fn preset_import_cn_free_viewer_flag() -> Flag
+
+pub fn preset_import_cn_free_viewer_rule() -> Rule
+
+pub fn preset_import_de_trial_owner_context(StringView) -> Context
+
+pub fn preset_import_de_trial_owner_flag() -> Flag
+
+pub fn preset_import_de_trial_owner_rule() -> Rule
+
+pub fn preset_import_fr_free_viewer_context(StringView) -> Context
+
+pub fn preset_import_fr_free_viewer_flag() -> Flag
+
+pub fn preset_import_fr_free_viewer_rule() -> Rule
+
+pub fn preset_import_jp_team_admin_context(StringView) -> Context
+
+pub fn preset_import_jp_team_admin_flag() -> Flag
+
+pub fn preset_import_jp_team_admin_rule() -> Rule
+
+pub fn preset_import_sg_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_import_sg_enterprise_operator_flag() -> Flag
+
+pub fn preset_import_sg_enterprise_operator_rule() -> Rule
+
+pub fn preset_import_us_pro_editor_context(StringView) -> Context
+
+pub fn preset_import_us_pro_editor_flag() -> Flag
+
+pub fn preset_import_us_pro_editor_rule() -> Rule
+
+pub fn preset_integration_br_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_integration_br_enterprise_operator_flag() -> Flag
+
+pub fn preset_integration_br_enterprise_operator_rule() -> Rule
+
+pub fn preset_integration_cn_team_admin_context(StringView) -> Context
+
+pub fn preset_integration_cn_team_admin_flag() -> Flag
+
+pub fn preset_integration_cn_team_admin_rule() -> Rule
+
+pub fn preset_integration_de_pro_editor_context(StringView) -> Context
+
+pub fn preset_integration_de_pro_editor_flag() -> Flag
+
+pub fn preset_integration_de_pro_editor_rule() -> Rule
+
+pub fn preset_integration_fr_team_admin_context(StringView) -> Context
+
+pub fn preset_integration_fr_team_admin_flag() -> Flag
+
+pub fn preset_integration_fr_team_admin_rule() -> Rule
+
+pub fn preset_integration_jp_trial_owner_context(StringView) -> Context
+
+pub fn preset_integration_jp_trial_owner_flag() -> Flag
+
+pub fn preset_integration_jp_trial_owner_rule() -> Rule
+
+pub fn preset_integration_sg_free_viewer_context(StringView) -> Context
+
+pub fn preset_integration_sg_free_viewer_flag() -> Flag
+
+pub fn preset_integration_sg_free_viewer_rule() -> Rule
+
+pub fn preset_integration_us_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_integration_us_enterprise_operator_flag() -> Flag
+
+pub fn preset_integration_us_enterprise_operator_rule() -> Rule
+
+pub fn preset_inventory_br_free_viewer_context(StringView) -> Context
+
+pub fn preset_inventory_br_free_viewer_flag() -> Flag
+
+pub fn preset_inventory_br_free_viewer_rule() -> Rule
+
+pub fn preset_inventory_cn_trial_owner_context(StringView) -> Context
+
+pub fn preset_inventory_cn_trial_owner_flag() -> Flag
+
+pub fn preset_inventory_cn_trial_owner_rule() -> Rule
+
+pub fn preset_inventory_de_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_inventory_de_enterprise_operator_flag() -> Flag
+
+pub fn preset_inventory_de_enterprise_operator_rule() -> Rule
+
+pub fn preset_inventory_fr_trial_owner_context(StringView) -> Context
+
+pub fn preset_inventory_fr_trial_owner_flag() -> Flag
+
+pub fn preset_inventory_fr_trial_owner_rule() -> Rule
+
+pub fn preset_inventory_jp_pro_editor_context(StringView) -> Context
+
+pub fn preset_inventory_jp_pro_editor_flag() -> Flag
+
+pub fn preset_inventory_jp_pro_editor_rule() -> Rule
+
+pub fn preset_inventory_sg_team_admin_context(StringView) -> Context
+
+pub fn preset_inventory_sg_team_admin_flag() -> Flag
+
+pub fn preset_inventory_sg_team_admin_rule() -> Rule
+
+pub fn preset_inventory_us_free_viewer_context(StringView) -> Context
+
+pub fn preset_inventory_us_free_viewer_flag() -> Flag
+
+pub fn preset_inventory_us_free_viewer_rule() -> Rule
+
+pub fn preset_messaging_br_team_admin_context(StringView) -> Context
+
+pub fn preset_messaging_br_team_admin_flag() -> Flag
+
+pub fn preset_messaging_br_team_admin_rule() -> Rule
+
+pub fn preset_messaging_cn_pro_editor_context(StringView) -> Context
+
+pub fn preset_messaging_cn_pro_editor_flag() -> Flag
+
+pub fn preset_messaging_cn_pro_editor_rule() -> Rule
+
+pub fn preset_messaging_de_free_viewer_context(StringView) -> Context
+
+pub fn preset_messaging_de_free_viewer_flag() -> Flag
+
+pub fn preset_messaging_de_free_viewer_rule() -> Rule
+
+pub fn preset_messaging_fr_pro_editor_context(StringView) -> Context
+
+pub fn preset_messaging_fr_pro_editor_flag() -> Flag
+
+pub fn preset_messaging_fr_pro_editor_rule() -> Rule
+
+pub fn preset_messaging_jp_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_messaging_jp_enterprise_operator_flag() -> Flag
+
+pub fn preset_messaging_jp_enterprise_operator_rule() -> Rule
+
+pub fn preset_messaging_sg_trial_owner_context(StringView) -> Context
+
+pub fn preset_messaging_sg_trial_owner_flag() -> Flag
+
+pub fn preset_messaging_sg_trial_owner_rule() -> Rule
+
+pub fn preset_messaging_us_team_admin_context(StringView) -> Context
+
+pub fn preset_messaging_us_team_admin_flag() -> Flag
+
+pub fn preset_messaging_us_team_admin_rule() -> Rule
+
+pub fn preset_moderation_br_trial_owner_context(StringView) -> Context
+
+pub fn preset_moderation_br_trial_owner_flag() -> Flag
+
+pub fn preset_moderation_br_trial_owner_rule() -> Rule
+
+pub fn preset_moderation_cn_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_moderation_cn_enterprise_operator_flag() -> Flag
+
+pub fn preset_moderation_cn_enterprise_operator_rule() -> Rule
+
+pub fn preset_moderation_de_team_admin_context(StringView) -> Context
+
+pub fn preset_moderation_de_team_admin_flag() -> Flag
+
+pub fn preset_moderation_de_team_admin_rule() -> Rule
+
+pub fn preset_moderation_fr_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_moderation_fr_enterprise_operator_flag() -> Flag
+
+pub fn preset_moderation_fr_enterprise_operator_rule() -> Rule
+
+pub fn preset_moderation_jp_free_viewer_context(StringView) -> Context
+
+pub fn preset_moderation_jp_free_viewer_flag() -> Flag
+
+pub fn preset_moderation_jp_free_viewer_rule() -> Rule
+
+pub fn preset_moderation_sg_pro_editor_context(StringView) -> Context
+
+pub fn preset_moderation_sg_pro_editor_flag() -> Flag
+
+pub fn preset_moderation_sg_pro_editor_rule() -> Rule
+
+pub fn preset_moderation_us_trial_owner_context(StringView) -> Context
+
+pub fn preset_moderation_us_trial_owner_flag() -> Flag
+
+pub fn preset_moderation_us_trial_owner_rule() -> Rule
+
+pub fn preset_navigation_br_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_navigation_br_enterprise_operator_flag() -> Flag
+
+pub fn preset_navigation_br_enterprise_operator_rule() -> Rule
+
+pub fn preset_navigation_cn_team_admin_context(StringView) -> Context
+
+pub fn preset_navigation_cn_team_admin_flag() -> Flag
+
+pub fn preset_navigation_cn_team_admin_rule() -> Rule
+
+pub fn preset_navigation_de_pro_editor_context(StringView) -> Context
+
+pub fn preset_navigation_de_pro_editor_flag() -> Flag
+
+pub fn preset_navigation_de_pro_editor_rule() -> Rule
+
+pub fn preset_navigation_fr_team_admin_context(StringView) -> Context
+
+pub fn preset_navigation_fr_team_admin_flag() -> Flag
+
+pub fn preset_navigation_fr_team_admin_rule() -> Rule
+
+pub fn preset_navigation_jp_trial_owner_context(StringView) -> Context
+
+pub fn preset_navigation_jp_trial_owner_flag() -> Flag
+
+pub fn preset_navigation_jp_trial_owner_rule() -> Rule
+
+pub fn preset_navigation_sg_free_viewer_context(StringView) -> Context
+
+pub fn preset_navigation_sg_free_viewer_flag() -> Flag
+
+pub fn preset_navigation_sg_free_viewer_rule() -> Rule
+
+pub fn preset_navigation_us_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_navigation_us_enterprise_operator_flag() -> Flag
+
+pub fn preset_navigation_us_enterprise_operator_rule() -> Rule
+
+pub fn preset_notification_br_team_admin_context(StringView) -> Context
+
+pub fn preset_notification_br_team_admin_flag() -> Flag
+
+pub fn preset_notification_br_team_admin_rule() -> Rule
+
+pub fn preset_notification_cn_pro_editor_context(StringView) -> Context
+
+pub fn preset_notification_cn_pro_editor_flag() -> Flag
+
+pub fn preset_notification_cn_pro_editor_rule() -> Rule
+
+pub fn preset_notification_de_free_viewer_context(StringView) -> Context
+
+pub fn preset_notification_de_free_viewer_flag() -> Flag
+
+pub fn preset_notification_de_free_viewer_rule() -> Rule
+
+pub fn preset_notification_fr_pro_editor_context(StringView) -> Context
+
+pub fn preset_notification_fr_pro_editor_flag() -> Flag
+
+pub fn preset_notification_fr_pro_editor_rule() -> Rule
+
+pub fn preset_notification_jp_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_notification_jp_enterprise_operator_flag() -> Flag
+
+pub fn preset_notification_jp_enterprise_operator_rule() -> Rule
+
+pub fn preset_notification_sg_trial_owner_context(StringView) -> Context
+
+pub fn preset_notification_sg_trial_owner_flag() -> Flag
+
+pub fn preset_notification_sg_trial_owner_rule() -> Rule
+
+pub fn preset_notification_us_team_admin_context(StringView) -> Context
+
+pub fn preset_notification_us_team_admin_flag() -> Flag
+
+pub fn preset_notification_us_team_admin_rule() -> Rule
+
+pub fn preset_onboarding_br_pro_editor_context(StringView) -> Context
+
+pub fn preset_onboarding_br_pro_editor_flag() -> Flag
+
+pub fn preset_onboarding_br_pro_editor_rule() -> Rule
+
+pub fn preset_onboarding_cn_free_viewer_context(StringView) -> Context
+
+pub fn preset_onboarding_cn_free_viewer_flag() -> Flag
+
+pub fn preset_onboarding_cn_free_viewer_rule() -> Rule
+
+pub fn preset_onboarding_de_trial_owner_context(StringView) -> Context
+
+pub fn preset_onboarding_de_trial_owner_flag() -> Flag
+
+pub fn preset_onboarding_de_trial_owner_rule() -> Rule
+
+pub fn preset_onboarding_fr_free_viewer_context(StringView) -> Context
+
+pub fn preset_onboarding_fr_free_viewer_flag() -> Flag
+
+pub fn preset_onboarding_fr_free_viewer_rule() -> Rule
+
+pub fn preset_onboarding_jp_team_admin_context(StringView) -> Context
+
+pub fn preset_onboarding_jp_team_admin_flag() -> Flag
+
+pub fn preset_onboarding_jp_team_admin_rule() -> Rule
+
+pub fn preset_onboarding_sg_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_onboarding_sg_enterprise_operator_flag() -> Flag
+
+pub fn preset_onboarding_sg_enterprise_operator_rule() -> Rule
+
+pub fn preset_onboarding_us_pro_editor_context(StringView) -> Context
+
+pub fn preset_onboarding_us_pro_editor_flag() -> Flag
+
+pub fn preset_onboarding_us_pro_editor_rule() -> Rule
+
+pub fn preset_pricing_br_free_viewer_context(StringView) -> Context
+
+pub fn preset_pricing_br_free_viewer_flag() -> Flag
+
+pub fn preset_pricing_br_free_viewer_rule() -> Rule
+
+pub fn preset_pricing_cn_trial_owner_context(StringView) -> Context
+
+pub fn preset_pricing_cn_trial_owner_flag() -> Flag
+
+pub fn preset_pricing_cn_trial_owner_rule() -> Rule
+
+pub fn preset_pricing_de_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_pricing_de_enterprise_operator_flag() -> Flag
+
+pub fn preset_pricing_de_enterprise_operator_rule() -> Rule
+
+pub fn preset_pricing_fr_trial_owner_context(StringView) -> Context
+
+pub fn preset_pricing_fr_trial_owner_flag() -> Flag
+
+pub fn preset_pricing_fr_trial_owner_rule() -> Rule
+
+pub fn preset_pricing_jp_pro_editor_context(StringView) -> Context
+
+pub fn preset_pricing_jp_pro_editor_flag() -> Flag
+
+pub fn preset_pricing_jp_pro_editor_rule() -> Rule
+
+pub fn preset_pricing_sg_team_admin_context(StringView) -> Context
+
+pub fn preset_pricing_sg_team_admin_flag() -> Flag
+
+pub fn preset_pricing_sg_team_admin_rule() -> Rule
+
+pub fn preset_pricing_us_free_viewer_context(StringView) -> Context
+
+pub fn preset_pricing_us_free_viewer_flag() -> Flag
+
+pub fn preset_pricing_us_free_viewer_rule() -> Rule
+
+pub fn preset_profile_br_trial_owner_context(StringView) -> Context
+
+pub fn preset_profile_br_trial_owner_flag() -> Flag
+
+pub fn preset_profile_br_trial_owner_rule() -> Rule
+
+pub fn preset_profile_cn_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_profile_cn_enterprise_operator_flag() -> Flag
+
+pub fn preset_profile_cn_enterprise_operator_rule() -> Rule
+
+pub fn preset_profile_de_team_admin_context(StringView) -> Context
+
+pub fn preset_profile_de_team_admin_flag() -> Flag
+
+pub fn preset_profile_de_team_admin_rule() -> Rule
+
+pub fn preset_profile_fr_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_profile_fr_enterprise_operator_flag() -> Flag
+
+pub fn preset_profile_fr_enterprise_operator_rule() -> Rule
+
+pub fn preset_profile_jp_free_viewer_context(StringView) -> Context
+
+pub fn preset_profile_jp_free_viewer_flag() -> Flag
+
+pub fn preset_profile_jp_free_viewer_rule() -> Rule
+
+pub fn preset_profile_sg_pro_editor_context(StringView) -> Context
+
+pub fn preset_profile_sg_pro_editor_flag() -> Flag
+
+pub fn preset_profile_sg_pro_editor_rule() -> Rule
+
+pub fn preset_profile_us_trial_owner_context(StringView) -> Context
+
+pub fn preset_profile_us_trial_owner_flag() -> Flag
+
+pub fn preset_profile_us_trial_owner_rule() -> Rule
+
+pub fn preset_recommendation_br_trial_owner_context(StringView) -> Context
+
+pub fn preset_recommendation_br_trial_owner_flag() -> Flag
+
+pub fn preset_recommendation_br_trial_owner_rule() -> Rule
+
+pub fn preset_recommendation_cn_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_recommendation_cn_enterprise_operator_flag() -> Flag
+
+pub fn preset_recommendation_cn_enterprise_operator_rule() -> Rule
+
+pub fn preset_recommendation_de_team_admin_context(StringView) -> Context
+
+pub fn preset_recommendation_de_team_admin_flag() -> Flag
+
+pub fn preset_recommendation_de_team_admin_rule() -> Rule
+
+pub fn preset_recommendation_fr_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_recommendation_fr_enterprise_operator_flag() -> Flag
+
+pub fn preset_recommendation_fr_enterprise_operator_rule() -> Rule
+
+pub fn preset_recommendation_jp_free_viewer_context(StringView) -> Context
+
+pub fn preset_recommendation_jp_free_viewer_flag() -> Flag
+
+pub fn preset_recommendation_jp_free_viewer_rule() -> Rule
+
+pub fn preset_recommendation_sg_pro_editor_context(StringView) -> Context
+
+pub fn preset_recommendation_sg_pro_editor_flag() -> Flag
+
+pub fn preset_recommendation_sg_pro_editor_rule() -> Rule
+
+pub fn preset_recommendation_us_trial_owner_context(StringView) -> Context
+
+pub fn preset_recommendation_us_trial_owner_flag() -> Flag
+
+pub fn preset_recommendation_us_trial_owner_rule() -> Rule
+
+pub fn preset_reporting_br_team_admin_context(StringView) -> Context
+
+pub fn preset_reporting_br_team_admin_flag() -> Flag
+
+pub fn preset_reporting_br_team_admin_rule() -> Rule
+
+pub fn preset_reporting_cn_pro_editor_context(StringView) -> Context
+
+pub fn preset_reporting_cn_pro_editor_flag() -> Flag
+
+pub fn preset_reporting_cn_pro_editor_rule() -> Rule
+
+pub fn preset_reporting_de_free_viewer_context(StringView) -> Context
+
+pub fn preset_reporting_de_free_viewer_flag() -> Flag
+
+pub fn preset_reporting_de_free_viewer_rule() -> Rule
+
+pub fn preset_reporting_fr_pro_editor_context(StringView) -> Context
+
+pub fn preset_reporting_fr_pro_editor_flag() -> Flag
+
+pub fn preset_reporting_fr_pro_editor_rule() -> Rule
+
+pub fn preset_reporting_jp_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_reporting_jp_enterprise_operator_flag() -> Flag
+
+pub fn preset_reporting_jp_enterprise_operator_rule() -> Rule
+
+pub fn preset_reporting_sg_trial_owner_context(StringView) -> Context
+
+pub fn preset_reporting_sg_trial_owner_flag() -> Flag
+
+pub fn preset_reporting_sg_trial_owner_rule() -> Rule
+
+pub fn preset_reporting_us_team_admin_context(StringView) -> Context
+
+pub fn preset_reporting_us_team_admin_flag() -> Flag
+
+pub fn preset_reporting_us_team_admin_rule() -> Rule
+
+pub fn preset_scheduler_br_trial_owner_context(StringView) -> Context
+
+pub fn preset_scheduler_br_trial_owner_flag() -> Flag
+
+pub fn preset_scheduler_br_trial_owner_rule() -> Rule
+
+pub fn preset_scheduler_cn_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_scheduler_cn_enterprise_operator_flag() -> Flag
+
+pub fn preset_scheduler_cn_enterprise_operator_rule() -> Rule
+
+pub fn preset_scheduler_de_team_admin_context(StringView) -> Context
+
+pub fn preset_scheduler_de_team_admin_flag() -> Flag
+
+pub fn preset_scheduler_de_team_admin_rule() -> Rule
+
+pub fn preset_scheduler_fr_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_scheduler_fr_enterprise_operator_flag() -> Flag
+
+pub fn preset_scheduler_fr_enterprise_operator_rule() -> Rule
+
+pub fn preset_scheduler_jp_free_viewer_context(StringView) -> Context
+
+pub fn preset_scheduler_jp_free_viewer_flag() -> Flag
+
+pub fn preset_scheduler_jp_free_viewer_rule() -> Rule
+
+pub fn preset_scheduler_sg_pro_editor_context(StringView) -> Context
+
+pub fn preset_scheduler_sg_pro_editor_flag() -> Flag
+
+pub fn preset_scheduler_sg_pro_editor_rule() -> Rule
+
+pub fn preset_scheduler_us_trial_owner_context(StringView) -> Context
+
+pub fn preset_scheduler_us_trial_owner_flag() -> Flag
+
+pub fn preset_scheduler_us_trial_owner_rule() -> Rule
+
+pub fn preset_search_br_team_admin_context(StringView) -> Context
+
+pub fn preset_search_br_team_admin_flag() -> Flag
+
+pub fn preset_search_br_team_admin_rule() -> Rule
+
+pub fn preset_search_cn_pro_editor_context(StringView) -> Context
+
+pub fn preset_search_cn_pro_editor_flag() -> Flag
+
+pub fn preset_search_cn_pro_editor_rule() -> Rule
+
+pub fn preset_search_de_free_viewer_context(StringView) -> Context
+
+pub fn preset_search_de_free_viewer_flag() -> Flag
+
+pub fn preset_search_de_free_viewer_rule() -> Rule
+
+pub fn preset_search_fr_pro_editor_context(StringView) -> Context
+
+pub fn preset_search_fr_pro_editor_flag() -> Flag
+
+pub fn preset_search_fr_pro_editor_rule() -> Rule
+
+pub fn preset_search_jp_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_search_jp_enterprise_operator_flag() -> Flag
+
+pub fn preset_search_jp_enterprise_operator_rule() -> Rule
+
+pub fn preset_search_sg_trial_owner_context(StringView) -> Context
+
+pub fn preset_search_sg_trial_owner_flag() -> Flag
+
+pub fn preset_search_sg_trial_owner_rule() -> Rule
+
+pub fn preset_search_us_team_admin_context(StringView) -> Context
+
+pub fn preset_search_us_team_admin_flag() -> Flag
+
+pub fn preset_search_us_team_admin_rule() -> Rule
+
+pub fn preset_security_br_free_viewer_context(StringView) -> Context
+
+pub fn preset_security_br_free_viewer_flag() -> Flag
+
+pub fn preset_security_br_free_viewer_rule() -> Rule
+
+pub fn preset_security_cn_trial_owner_context(StringView) -> Context
+
+pub fn preset_security_cn_trial_owner_flag() -> Flag
+
+pub fn preset_security_cn_trial_owner_rule() -> Rule
+
+pub fn preset_security_de_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_security_de_enterprise_operator_flag() -> Flag
+
+pub fn preset_security_de_enterprise_operator_rule() -> Rule
+
+pub fn preset_security_fr_trial_owner_context(StringView) -> Context
+
+pub fn preset_security_fr_trial_owner_flag() -> Flag
+
+pub fn preset_security_fr_trial_owner_rule() -> Rule
+
+pub fn preset_security_jp_pro_editor_context(StringView) -> Context
+
+pub fn preset_security_jp_pro_editor_flag() -> Flag
+
+pub fn preset_security_jp_pro_editor_rule() -> Rule
+
+pub fn preset_security_sg_team_admin_context(StringView) -> Context
+
+pub fn preset_security_sg_team_admin_flag() -> Flag
+
+pub fn preset_security_sg_team_admin_rule() -> Rule
+
+pub fn preset_security_us_free_viewer_context(StringView) -> Context
+
+pub fn preset_security_us_free_viewer_flag() -> Flag
+
+pub fn preset_security_us_free_viewer_rule() -> Rule
+
+pub fn preset_support_br_team_admin_context(StringView) -> Context
+
+pub fn preset_support_br_team_admin_flag() -> Flag
+
+pub fn preset_support_br_team_admin_rule() -> Rule
+
+pub fn preset_support_cn_pro_editor_context(StringView) -> Context
+
+pub fn preset_support_cn_pro_editor_flag() -> Flag
+
+pub fn preset_support_cn_pro_editor_rule() -> Rule
+
+pub fn preset_support_de_free_viewer_context(StringView) -> Context
+
+pub fn preset_support_de_free_viewer_flag() -> Flag
+
+pub fn preset_support_de_free_viewer_rule() -> Rule
+
+pub fn preset_support_fr_pro_editor_context(StringView) -> Context
+
+pub fn preset_support_fr_pro_editor_flag() -> Flag
+
+pub fn preset_support_fr_pro_editor_rule() -> Rule
+
+pub fn preset_support_jp_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_support_jp_enterprise_operator_flag() -> Flag
+
+pub fn preset_support_jp_enterprise_operator_rule() -> Rule
+
+pub fn preset_support_sg_trial_owner_context(StringView) -> Context
+
+pub fn preset_support_sg_trial_owner_flag() -> Flag
+
+pub fn preset_support_sg_trial_owner_rule() -> Rule
+
+pub fn preset_support_us_team_admin_context(StringView) -> Context
+
+pub fn preset_support_us_team_admin_flag() -> Flag
+
+pub fn preset_support_us_team_admin_rule() -> Rule
+
+pub fn preset_workspace_br_free_viewer_context(StringView) -> Context
+
+pub fn preset_workspace_br_free_viewer_flag() -> Flag
+
+pub fn preset_workspace_br_free_viewer_rule() -> Rule
+
+pub fn preset_workspace_cn_trial_owner_context(StringView) -> Context
+
+pub fn preset_workspace_cn_trial_owner_flag() -> Flag
+
+pub fn preset_workspace_cn_trial_owner_rule() -> Rule
+
+pub fn preset_workspace_de_enterprise_operator_context(StringView) -> Context
+
+pub fn preset_workspace_de_enterprise_operator_flag() -> Flag
+
+pub fn preset_workspace_de_enterprise_operator_rule() -> Rule
+
+pub fn preset_workspace_fr_trial_owner_context(StringView) -> Context
+
+pub fn preset_workspace_fr_trial_owner_flag() -> Flag
+
+pub fn preset_workspace_fr_trial_owner_rule() -> Rule
+
+pub fn preset_workspace_jp_pro_editor_context(StringView) -> Context
+
+pub fn preset_workspace_jp_pro_editor_flag() -> Flag
+
+pub fn preset_workspace_jp_pro_editor_rule() -> Rule
+
+pub fn preset_workspace_sg_team_admin_context(StringView) -> Context
+
+pub fn preset_workspace_sg_team_admin_flag() -> Flag
+
+pub fn preset_workspace_sg_team_admin_rule() -> Rule
+
+pub fn preset_workspace_us_free_viewer_context(StringView) -> Context
+
+pub fn preset_workspace_us_free_viewer_flag() -> Flag
+
+pub fn preset_workspace_us_free_viewer_rule() -> Rule
+
 pub fn rollout_bucket(StringView, StringView, StringView) -> Int
 
 pub fn starts_with(StringView, StringView) -> Condition

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 - 2026-08-17
+
+- Added a reusable preset catalog with 175 typed Rule / Flag / Context recipes.
+- Added catalog tests covering preset lookup, evaluation and validation.
+- Clarified ecosystem positioning, project boundaries and source scale.
+
 ## 0.1.0 - 2026-08-15
 
 - Added MoonBit-native feature flag data model.
